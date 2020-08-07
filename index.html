@@ -1,32 +1,38 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Advotics</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Advotics</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/main.css">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <link href="assets/css/all.css" rel="stylesheet">
+        <!-- Styles -->
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/daterangepicker.css"/>
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+        <link href="assets/css/all.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <script type="text/javascript" src="assets/js/datepickerperiode.js"></script>
-  </head>
-  <body>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.com/libraries/Chart.js"></script>
+        <script type="text/javascript" src="assets/js/moment.js"></script>
+        <script type="text/javascript" src="assets/js/daterangepicker.js"></script>
+        <script type="text/javascript" src="assets/js/datepickerperiode.js"></script>
+        <!-- ChartJS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" />
+        
+    </head>
+<body>
       <!-- Header Menu -->
       <div class="header-menu">
           <div class="container-fluid">
@@ -134,10 +140,10 @@
                                         <option>Last 1 months</option>
                                         <option>Last Week</option>
                                     </select>
-                                    <a href="#"><img src="assets/img/icon-more.svg" alt="menu" class="img-responsive"/></a>
+                                    <a id="randomizeData"><img src="assets/img/icon-more.svg" alt="menu" class="img-responsive"/></a>
                                 </div>
                                 <div class="content-graph">
-
+                                    <canvas id="myChart" height="170"></canvas>
                                 </div>
                             </div>
                             <div class="bottom-column-half">
@@ -153,7 +159,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -162,7 +171,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -171,7 +183,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -180,7 +195,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -189,7 +207,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -208,7 +229,10 @@
                                                     <img src="assets/img/product2.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -217,7 +241,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -226,7 +253,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -235,7 +265,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -244,7 +277,10 @@
                                                     <img src="assets/img/product.png" alt="product" class="img-responsive"/>
                                                     <div class="seller-desc">
                                                         <span>[Nama Produk]</span>
-                                                        <span class="rawit">Rp xxxx</span>
+                                                        <div class="sub-desc">
+                                                            <span class="rawit">Rp xxxx</span>
+                                                            <span class="tot-sell">[jml terjual]</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -264,4 +300,6 @@
         $("i", this).toggleClass("fas fa-angle-up fas fa-angle-down");
     });
   </script>
+  
+  <script type="text/javascript" src="assets/js/mychart.js"></script>
 </html>

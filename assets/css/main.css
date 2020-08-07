@@ -40,6 +40,79 @@ ol {
   left: unset !important;
 }
 
+.daterangepicker .drp-selected {
+  display: none !important;
+}
+
+.daterangepicker td {
+  height: 32px !important;
+}
+
+.daterangepicker td.active {
+  border-radius: 50% !important;
+  height: 32px !important;
+  color: #37b04c !important;
+  font-weight: bold !important;
+  background-color: #cef1d4 !important;
+}
+
+.daterangepicker td.in-range {
+  background-color: #ecfff0 !important;
+}
+
+.daterangepicker .ranges li.active {
+  background-color: #37b04c !important;
+}
+
+.daterangepicker .applyBtn {
+  width: 83%;
+  margin: 0 auto;
+  display: block;
+  background: #37b04c;
+  font-size: 13px;
+  padding: 7px;
+  border-radius: 2px;
+  border: none;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.daterangepicker .ranges {
+  padding-bottom: 12px;
+}
+
+.daterangepicker .header-nav {
+  padding: 12px 12px 10px;
+}
+.daterangepicker .header-nav .ic-calendar {
+  background-image: url("../img/calendar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.daterangepicker .header-nav span {
+  font-weight: 600;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.daterangepicker .cancelBtn {
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  padding: 0px;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 36px;
+  vertical-align: middle;
+  line-height: 35px;
+}
+
 .header-menu {
   background-color: #FFFFFF;
   height: 64px;
@@ -47,6 +120,7 @@ ol {
   position: fixed;
   top: 0px;
   width: 100%;
+  z-index: 3;
 }
 .header-menu-logo {
   display: flex;
@@ -58,6 +132,9 @@ ol {
   display: inline-block;
   vertical-align: middle;
   margin: 10px 0px;
+}
+.header-menu-logo a:focus {
+  outline: none;
 }
 .header-menu-logo .powered {
   margin-left: 10px;
@@ -108,7 +185,7 @@ ol {
   background: #FFFFFF;
   width: 72px;
   border-right: 0.5px solid #D2D2D2;
-  z-index: -1;
+  z-index: 2;
 }
 .sidebar-menu .main-menu ul {
   list-style: none;
@@ -146,11 +223,11 @@ ol {
 }
 
 .content {
-  height: 100vh;
   background: #F7F7F7;
   z-index: -2;
   margin-left: 72px;
   padding-top: 90px;
+  min-height: 100vh;
 }
 .content .header-content {
   margin-bottom: 30px;
@@ -163,7 +240,7 @@ ol {
   font-weight: 600;
 }
 .content .header-content .col-date-picker .date-range-input {
-  width: 350px;
+  width: 70%;
   float: right;
   text-align: left;
   height: 38px;
@@ -172,6 +249,12 @@ ol {
   vertical-align: middle;
   line-height: 35px;
   box-shadow: 0px 2px 3px #00000029;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .header-content .col-date-picker .date-range-input span {
+  flex: 1 0 0;
 }
 .content .header-content .col-date-picker .date-range-input .ic-calendar {
   background-image: url("../img/calendar.png");
@@ -283,6 +366,136 @@ ol {
 }
 .content .sub-content-article .top-box-content .basket {
   width: 48px;
+}
+.content .sub-content-article .bottom-column {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+  padding-bottom: 60px;
+}
+.content .sub-content-article .bottom-column-half {
+  flex: 1 0 0;
+  margin-right: 8px;
+}
+.content .sub-content-article .bottom-column-half:first-child {
+  border: 1px solid #CDCDCD;
+  border-radius: 2px;
+  padding: 24px;
+  background-color: #FFFFFF;
+}
+.content .sub-content-article .bottom-column-half .title {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content .sub-content-article .bottom-column-half .title span {
+  flex: 1 0 0;
+  font-size: 20px;
+}
+.content .sub-content-article .bottom-column-half .title select.form-group {
+  flex: 0 0 0;
+  font-size: 12px;
+  box-shadow: 0px 2px 3px #0000000D;
+  border: 1px solid #D7DAE2;
+  border-radius: 2px;
+  padding: 9px;
+}
+.content .sub-content-article .bottom-column-half .title a {
+  width: 2%;
+  margin-left: 20px;
+}
+.content .sub-content-article .bottom-column-half .title a img {
+  vertical-align: middle;
+}
+.content .sub-content-article .bottom-column-half:last-child {
+  margin-right: 0px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 {
+  flex: 1 0 0;
+  border: 1px solid #CDCDCD;
+  border-radius: 2px;
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6:first-child {
+  margin-right: 8px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6:last-child {
+  margin-left: 8px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .title-litle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .title-litle span {
+  font-size: 20px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .title-litle a {
+  width: 5%;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .title-litle a img {
+  vertical-align: middle;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul {
+  list-style: none;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li {
+  border: 0.5px solid #C5C5C59C;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  margin-bottom: 8px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li:last-child {
+  margin-bottom: 0px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li.top-sell {
+  background-color: #FFE7BD;
+  border: none;
+  min-height: 80px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li.top-sell .seller img {
+  height: 80px;
+  width: 80px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li.top-sell .seller-desc span {
+  font-size: 20px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li.top-sell .seller-desc .sub-desc span {
+  font-size: 14px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li .seller {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li .seller img {
+  width: 60px;
+  height: 60px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li .seller-desc {
+  flex: 1 0 0;
+  margin-left: 8px;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li .seller-desc .sub-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3px;
+}
+.content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li .seller-desc .sub-desc .rawit, .content .sub-content-article .bottom-column-half:last-child .bottom-column-half-6 .listings ul li .seller-desc .sub-desc .tot-sell {
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
