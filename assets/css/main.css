@@ -1,0 +1,288 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  max-width: 100%;
+  padding: 0px 34px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: #4D4F5C;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+.grid .col-half-6 {
+  width: 50%;
+}
+
+.daterangepicker.opensright:after {
+  right: 55px !important;
+  left: unset !important;
+}
+
+.daterangepicker.opensright:before {
+  right: 54px !important;
+  left: unset !important;
+}
+
+.header-menu {
+  background-color: #FFFFFF;
+  height: 64px;
+  box-shadow: 0px 3px 6px #00000029;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.header-menu-logo {
+  display: flex;
+}
+.header-menu-logo a {
+  width: 40%;
+}
+.header-menu-logo a .main-logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0px;
+}
+.header-menu-logo .powered {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.header-menu-logo .powered span {
+  width: 14%;
+  font-size: 11px;
+}
+.header-menu-logo .powered .sub-logo {
+  width: 17%;
+}
+.header-menu-user {
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  justify-content: flex-end;
+  margin: 12px 0px;
+  align-items: center;
+}
+.header-menu-user .author {
+  display: flex;
+  flex-direction: column;
+}
+.header-menu-user .author-img {
+  width: 5%;
+  margin: 0px 16px;
+}
+.header-menu-user .author .title {
+  font-size: 14px;
+}
+.header-menu-user .author .name {
+  font-size: 10px;
+  color: #727272;
+}
+.header-menu-user .user-logout {
+  width: 2%;
+}
+
+.sidebar-menu {
+  display: block;
+  padding-top: 64px;
+  position: fixed;
+  height: 100vh;
+  background: #FFFFFF;
+  width: 72px;
+  border-right: 0.5px solid #D2D2D2;
+  z-index: -1;
+}
+.sidebar-menu .main-menu ul {
+  list-style: none;
+}
+.sidebar-menu .main-menu ul li {
+  text-align: center;
+  min-height: 48px;
+}
+.sidebar-menu .main-menu ul li a {
+  display: inline-block;
+}
+.sidebar-menu .main-menu ul li a .menu-icon {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.sidebar-menu .main-menu ul li a .menu-icon span {
+  display: inline-block;
+  background-color: #C5C5C5;
+  height: 3px;
+  width: 24px;
+  border-radius: 50px;
+  margin-bottom: 4px;
+}
+.sidebar-menu .main-menu ul li a .menu-icon span:last-child {
+  margin-bottom: 0px;
+  width: 18px;
+}
+.sidebar-menu .main-menu ul li a.item-menu {
+  width: 24px;
+  margin-top: 10px;
+}
+.sidebar-menu .main-menu ul li.current {
+  background-color: #D2D2D2;
+}
+
+.content {
+  height: 100vh;
+  background: #F7F7F7;
+  z-index: -2;
+  margin-left: 72px;
+  padding-top: 90px;
+}
+.content .header-content {
+  margin-bottom: 30px;
+}
+.content .header-content h2.title-content {
+  margin: 0px;
+  font-size: 40px;
+  color: #707070C4;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+}
+.content .header-content .col-date-picker .date-range-input {
+  width: 350px;
+  float: right;
+  text-align: left;
+  height: 38px;
+  background-color: #ffffff;
+  padding: 7px 16px;
+  vertical-align: middle;
+  line-height: 35px;
+  box-shadow: 0px 2px 3px #00000029;
+}
+.content .header-content .col-date-picker .date-range-input .ic-calendar {
+  background-image: url("../img/calendar.png");
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 16px;
+}
+.content .header-content .col-date-picker .date-range-input span::before {
+  content: "Period";
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 16px;
+}
+.content .sub-content-title {
+  background-color: #37B04C;
+  padding: 12px 16px;
+}
+.content .sub-content-title h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 0px;
+  font-weight: 600;
+  font-family: "Sourse Sans Pro", sans-serif;
+}
+.content .sub-content-title .text-link {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 300;
+}
+.content .sub-content-title .text-link i.ic-think {
+  background-image: url("../img/ic-help.png");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  margin-right: 3px;
+  vertical-align: bottom;
+}
+.content .sub-content-title .text-link a {
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.content .sub-content-title .text-link button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  margin-left: 10px;
+}
+.content .sub-content-title .text-link button i {
+  color: #FFFFFF;
+}
+.content .sub-content-title .text-link button:focus {
+  border: none;
+  outline: none;
+}
+.content .sub-content-article {
+  margin-top: 16px;
+}
+.content .sub-content-article .top-box {
+  background: #ffffff;
+  width: 19%;
+  border: 1px solid #CDCDCD;
+  border-radius: 2px;
+  padding: 15px;
+}
+.content .sub-content-article .top-box-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.content .sub-content-article .top-box-title .txt {
+  font-size: 14px;
+  width: 96%;
+}
+.content .sub-content-article .top-box-title a {
+  width: 4%;
+}
+.content .sub-content-article .top-box-content {
+  display: flex;
+}
+.content .sub-content-article .top-box-content .amount {
+  display: flex;
+  flex-direction: column;
+  width: 83%;
+}
+.content .sub-content-article .top-box-content .amount .price {
+  font-weight: 700;
+  font-size: 30px;
+}
+.content .sub-content-article .top-box-content .amount .price-desc {
+  font-size: 11px;
+}
+.content .sub-content-article .top-box-content .amount .price-desc .ic-red-down {
+  background-image: url("../img/arrow-down.svg");
+  display: inline-block;
+  height: 11px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 14px;
+}
+.content .sub-content-article .top-box-content .amount .price-desc .red {
+  color: red;
+  font-size: 14px;
+}
+.content .sub-content-article .top-box-content .basket {
+  width: 48px;
+}
+
+/*# sourceMappingURL=main.css.map */

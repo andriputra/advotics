@@ -1,0 +1,260 @@
+@import 'reset';
+@import 'colors';
+@import 'general';
+
+.header{
+    &-menu{
+        background-color: $white;
+        height: 64px;
+        box-shadow: 0px 3px 6px #00000029;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        &-logo{
+            display: flex;
+            a{
+                width: 40%;
+                .main-logo{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 10px 0px;
+                }
+            }
+            .powered{
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                margin-top: 10px;
+                span{
+                    width: 14%;
+                    font-size: 11px;
+                }
+                .sub-logo{
+                    width: 17%;
+                }
+            }
+        }
+        &-user{
+            display: flex;
+            flex-direction: row;
+            flex-basis: auto;
+            justify-content: flex-end;
+            margin: 12px 0px;
+            align-items: center;
+            .author{
+                display: flex;
+                flex-direction: column;
+                &-img{
+                    width: 5%;
+                    margin: 0px 16px;
+                }
+                .title{
+                    font-size: 14px;
+                }
+                .name{
+                    font-size: 10px;
+                    color: #727272;
+                }
+            }
+            .user-logout{
+                width: 2%;
+            }
+        }
+    }
+}
+.sidebar{
+    &-menu{
+        display: block;
+        padding-top: 64px;
+        position: fixed;
+        height: 100vh;
+        background: $white;
+        width: 72px;
+        border-right: 0.5px solid #D2D2D2;
+        z-index: -1;
+        .main-menu{
+            ul{
+                list-style: none;
+                li{
+                    text-align: center;
+                    min-height: 48px;
+                    a{
+                        display: inline-block;
+                        .menu-icon{
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 15px;
+                            span{
+                                display: inline-block;
+                                background-color: #C5C5C5;
+                                height: 3px;
+                                width: 24px;
+                                border-radius: 50px;
+                                margin-bottom: 4px;
+                                &:last-child{
+                                    margin-bottom: 0px;
+                                    width: 18px;
+                                }
+                            }
+                        }
+                        &.item-menu{
+                            width: 24px;
+                            margin-top: 10px;
+                        }
+                    }
+                    &.current{
+                        background-color: $darkgray;
+                    }
+                }
+            }
+        }
+    }
+}
+.content{
+    height: 100vh;
+    background: $lightgray ;
+    z-index: -2;
+    margin-left: 72px;
+    padding-top: 90px;
+    .header-content{
+        margin-bottom: 30px;
+        h2{
+            &.title-content{
+                margin: 0px;
+                font-size: 40px;
+                color: #707070C4;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-weight: 600;
+            }
+        }
+        .col-date-picker{
+            .date-range-input{
+                width: 350px;
+                float: right;
+                text-align: left;
+                height: 38px;
+                background-color: #ffffff;
+                padding: 7px 16px;
+                vertical-align: middle;
+                line-height: 35px;
+                box-shadow: 0px 2px 3px #00000029;
+                .ic-calendar{
+                    background-image: url('../img/calendar.png');
+                    display: inline-block;
+                    width: 22px;
+                    height: 22px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                    margin-right: 16px;
+                }
+                span::before{
+                    content: 'Period';
+                    display: inline-block;
+                    font-size: 16px;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+    .sub-content{
+        &-title{
+            background-color: $green;
+            padding: 12px 16px;
+            h3{
+                color: $white;
+                font-size: 20px;
+                margin: 0px;
+                font-weight: 600;
+                font-family: 'Sourse Sans Pro', sans-serif  ;
+            }
+            .text-link{
+                text-align: right;
+                font-size: 14px;
+                font-weight: 300;
+                i{
+                    &.ic-think{
+                        background-image: url('../img/ic-help.png');
+                        width: 20px;
+                        height: 20px;
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        display: inline-block;
+                        margin-right: 3px;
+                        vertical-align: bottom;
+                    }
+                }
+                a{
+                    font-size: 14px;
+                    color: $white;
+                }
+                button{
+                    background-color: transparent;
+                    border: none;
+                    box-shadow: none;
+                    margin-left: 10px;
+                    i{
+                        color: $white;
+                    }
+                    &:focus{
+                        border: none;
+                        outline: none;
+                    }
+                }
+            }
+        }
+        &-article{
+            margin-top: 16px;
+            .top-box{
+                background: #ffffff;
+                width: 19%;
+                border: 1px solid #CDCDCD;
+                border-radius: 2px;
+                padding: 15px;
+                &-title{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    .txt{
+                        font-size: 14px;
+                        width: 96%;
+                    }
+                    a{
+                        width: 4%;
+                    }
+                }
+                &-content{
+                    display: flex;
+                    .amount{
+                        display: flex;
+                        flex-direction: column;
+                        width: 83%;
+                        .price{
+                            font-weight: 700;
+                            font-size: 30px;
+                            &-desc{
+                                font-size: 11px;
+                                .ic-red-down{
+                                    background-image: url('../img/arrow-down.svg');
+                                    display: inline-block;
+                                    height: 11px;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    width: 14px;
+                                }
+                                .red{
+                                    color: red;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .basket{
+                        width: 48px;
+                    }
+                }
+            }
+        }
+    }
+}

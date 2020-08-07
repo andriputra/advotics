@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Advotics</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script type="text/javascript" src="assets/js/datepickerperiode.js"></script>
+  </head>
+  <body>
+      <!-- Header Menu -->
+      <div class="header-menu">
+          <div class="container-fluid">
+            <div class="grid">
+                <div class="col-half-6">
+                    <div class="header-menu-logo">
+                        <a href="index.htm"><img src="assets/img/advotics-logo.jpg" class="img-responsive main-logo" alt="logo"/></a>
+                        <div class="powered">
+                            <span>powered by </span> 
+                            <img src="assets/img/advotics-logo.jpg" class="img-responsive sub-logo" alt="logo"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-half-6">
+                    <div class="header-menu-user">
+                        <div class="author">
+                            <span class="title">Username</span>
+                            <span class="name">Company Name</span>
+                        </div>
+                        <div class="author-img">
+                            <img src="assets/img/profile.svg" alt="author" class="img-responsive"/>
+                        </div>
+                        <div class="user-logout">
+                            <a href="#"><img src="assets/img/logout.png" alt="logout-icon" class="img-responsive"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="sidebar-menu">
+          <div class="main-menu">
+              <ul>
+                  <li>
+                        <a href="#">
+                            <div class="menu-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="current">
+                        <a href="#" class="item-menu">
+                            <img src="assets/img/icon-dash.svg" alt="dashboard" class="img-responsive"/>
+                        </a>
+                    </li>
+              </ul>
+          </div>
+      </div>
+      <div class="content">
+            <div class="container-fluid">
+                <div class="header-content">
+                    <div class="grid">
+                        <div class="col-half-6">
+                            <h2 class="title-content">Dashboard</h2>
+                        </div>
+                        <div class="col-half-6">
+                            <div class="col-date-picker">
+                                <div id="reportrange" class="date-range-input">
+                                    <i class="ic-calendar"></i>
+                                    <span></span> 
+                                    <i class="fas fa-angle-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub-content">
+                    <div class="sub-content-title">
+                        <div class="grid">
+                            <div class="col-half-6">
+                                <h3>MARKET INSIGHTS</h3>
+                            </div>
+                            <div class="col-half-6">
+                                <div class="text-link">
+                                    <i class="ic-think"></i> <a href="#">Click Here for Help</a> 
+                                    <button id="toggle-slide"><i class="fas fa-angle-up"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub-content-article">
+                        <div class="top-box">
+                            <div class="top-box-title">
+                                <span class="txt">Sales Turnover</span>
+                                <a href="#"><img src="assets/img/icon-more.svg" alt="menu" class="img-responsive"/></a>
+                            </div>
+                            <div class="top-box-content">
+                                <div class="amount">
+                                    <span class="price">Rp 3,600.000</span>
+                                    <span class="price-desc"><i class="ic-red-down"></i><span class="red">13.8%</span> last period in products sold</span>
+                                </div>
+                                <div class="basket">
+                                    <img src="assets/img/sales.png" alt="trolly" class="img-responsive"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom-column">
+                            <div class=bottom-column-half>
+                                <div class="title">
+                                    <span>AVERAGE PURCHASE VALUE</span>
+                                    <select class="form-group">
+                                        <option>Last 5 months</option>
+                                        <option>Last 1 months</option>
+                                        <option>Last Week</option>
+                                    </select>
+                                    <a href="#"><img src="assets/img/icon-more.svg" alt="menu" class="img-responsive"/></a>
+                                </div>
+                                <div class="content-graph">
+
+                                </div>
+                            </div>
+                            <div class="bottom-column-half">
+                                <div class="bottom-column-half-6">
+                                    <div class="title-litle">
+                                        <span>BEST SELLING SKU</span>
+                                        <a href="#"><img src="assets/img/icon-more.svg" alt="menu" class="img-responsive"/></a>
+                                    </div>
+                                    <div class="listings">
+                                        <ul>
+                                            <li class="top-sell">
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="bottom-column-half-6">
+                                    <div class="title-litle">
+                                        <span>BEST KOMPETITOR SKU</span>
+                                        <a href="#"><img src="assets/img/icon-more.svg" alt="menu" class="img-responsive"/></a>
+                                    </div>
+                                    <div class="listings">
+                                        <ul>
+                                            <li class="top-sell">
+                                                <div class="seller">
+                                                    <img src="assets/img/product2.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="seller">
+                                                    <img src="assets/img/product.png" alt="product" class="img-responsive"/>
+                                                    <div class="seller-desc">
+                                                        <span>[Nama Produk]</span>
+                                                        <span class="rawit">Rp xxxx</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+  </body>
+  <script>
+    $('#toggle-slide').click(function(){
+        $('.sub-content-article').slideToggle('fast');
+        $("i", this).toggleClass("fas fa-angle-up fas fa-angle-down");
+    });
+  </script>
+</html>
